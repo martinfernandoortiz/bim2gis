@@ -1,3 +1,17 @@
+const viewer = new Cesium.Viewer('cesiumContainer', {
+  imageryProvider: new Cesium.WebMapServiceImageryProvider({
+    url: 'https://ows.terrestris.de/osm/service', // Cambia por tu servidor WMS si lo tienes
+    layers: 'OSM-WMS',
+    parameters: {
+      service: 'WMS',
+      version: '1.1.1',
+      request: 'GetMap',
+      format: 'image/png',
+      transparent: true,
+    },
+  }),
+  terrainProvider: Cesium.createWorldTerrain(),
+});
 // Coordenadas de Larrazábal y Dellepiane, Buenos Aires
 const lat = -34.672546;
 const lon = -58.478379;
