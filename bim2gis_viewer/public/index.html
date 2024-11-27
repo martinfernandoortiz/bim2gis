@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IFC + GIS Viewer</title>
+  <!-- Estilo de Cesium -->
   <link rel="stylesheet" href="https://cesium.com/downloads/cesiumjs/releases/latest/Build/Cesium/Widgets/widgets.css">
   <style>
     html, body, #cesiumContainer {
@@ -16,8 +17,12 @@
 </head>
 <body>
   <div id="cesiumContainer"></div>
-  <script src="./libs/Cesium.js"></script>
-  <script src="./libs/ifc.min.js"></script>
+  
+  <!-- Bibliotecas desde CDN -->
+  <script src="https://cesium.com/downloads/cesiumjs/releases/latest/Build/Cesium/Cesium.js"></script>
+  <script src="https://unpkg.com/web-ifc-viewer@latest/dist/ifc-viewer.min.js"></script>
+  
+  <!-- Archivo principal de tu aplicación -->
   <script src="./app.js"></script>
 </body>
 </html>
