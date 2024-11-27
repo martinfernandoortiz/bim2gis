@@ -15,7 +15,7 @@ const viewer = new Cesium.Viewer('cesiumContainer', {
 
 // Configurar cámara inicial
 viewer.scene.camera.setView({
-  destination: Cesium.Cartesian3.fromDegrees(-74.006, 40.7128, 1000), // Nueva York como ejemplo
+  destination: Cesium.Cartesian3.fromDegrees(-58.47, -34.67, 1000), //Larrazabal
 });
 
 // Inicializar IFC.js
@@ -24,7 +24,7 @@ const ifcModels = [];
 
 async function loadIFCModel() {
   // Cargar modelo IFC
-  const ifcUrl = './models/modelo.ifc'; // Cambia la ruta según tu modelo
+  const ifcUrl = './models/MPD-A-MO-ES-07_Puente Larrazabal.ifc'; // Cambia la ruta según tu modelo
   await ifcLoader.ifcManager.setWasmPath('./libs/'); // Ruta del archivo wasm de ifc.js
   const model = await ifcLoader.load(ifcUrl);
 
